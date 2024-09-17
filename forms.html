@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lab 3 Form</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Profile Personal Form</h1>
+    </div>
+
+    <div class="form">
+      <form action="form_redirect.html">
+        <!-- Personal Information -->
+          <!--the fieldset is used to group related elements -->
+        <fieldset>
+          <legend>Personal Information</legend>
+           <!-- This tag creates the form for user input-->
+          <label for="fname">Full Name:</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Enter your full name"
+            required
+          />
+          <br />
+
+          <label for="email">Email:</label>
+           <!-- takes input -->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <br />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <br />
+
+          <label for="dob">When were you born?</label>
+          <input type="date" name="dob" id="dob" required />
+          <br />
+
+          <label for="description">About you:</label>
+           <!-- multiline input control-->
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Write something about yourself"
+            required
+          ></textarea>
+          <br />
+
+          <!-- Additional Input Types -->
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" name="color" />
+          <br />
+
+          <label for="datetime">Preferred Work Date and Time:</label>
+          <input type="datetime-local" id="datetime" name="datetime" />
+          <br />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+          <br />
+
+          <label for="time">Preferred Work Time:</label>
+          <input type="time" id="time" name="time" />
+          <br />
+
+          <label for="url">LinkedIn URL:</label>
+          <input type="url" id="url" name="url" placeholder="Enter your website URL" />
+          <br />
+
+          <label for="week">Preferred Work Week:</label>
+          <input type="week" id="week" name="week" />
+          <br />
+
+          <label for="file">Upload Perosnal Resume:</label>
+          <input type="file" id="file" name="file" />
+          <br />
+
+          <label for="range">Select a range:</label>
+          <input type="range" id="range" name="range" min="0" max="100" />
+          <br />
+
+          <label for="search">Search:</label>
+          <input type="search" id="search" name="search" placeholder="Search" />
+          <br />
+
+          <label for="month">Select Starting Work Month:</label>
+          <input type="month" id="month" name="month" />
+          <br />
+
+          <label for="number">Preferred Starting salary</label>
+          <input type="number" id="number" name="number" />
+          <br />
+
+          <label for="image">Profile Upload:</label>
+          <input type="image" src="profile.jpg" alt="Submit" width="100" height="100" />
+          <br />
+
+          <br>
+          <!-- button element for clickable button-->
+          <input type="button" value="Random Button" />
+          
+
+          <!-- Hidden Input -->
+          <input type="hidden" name="hiddenField" value="hiddenValue" />
+
+        </fieldset>
+
+        <!-- Favorite facts -->
+        <fieldset>
+          <legend>Facts About You</legend>
+
+          <label for="sport">What sports do you play?</label>
+          <select name="sport" id="sport" required>
+             <!--offers a dropdown list -->
+            <option value="">Select a sport</option>
+
+             <!-- group of related options in the dropdown list -->
+            <optgroup label="Racket Sports">
+              <option value="badminton">Badminton</option>
+              <option value="tennis">Tennis</option>
+              <option value="pickleball">PickleBall</option>
+            </optgroup>
+          </select>
+          <br />
+
+          <label for="icecream">Whats your Favorite IceCream?</label>
+          <!--defines the drop down list -->
+          <select name="icecream" id="icecream" required>
+            <option value="">Select a flavor</option>
+            <option value="chocolate">chocolate</option>
+            <option value="vannila">vannila</option>
+          </select>
+          <br />
+
+          <label for="custom_brand">Type your favorite brand:</label>
+          <input
+            list="brand"
+            id="brand"
+            name="brand"
+            placeholder="Select or type a brand"
+            required
+          />
+          <!-- list of pre-defined options for the input controls -->
+          <datalist id="brand">
+            <option value="Nike"></option>
+            <option value="Adidas"></option>
+          </datalist>
+        </fieldset>
+
+        <!-- GitHub Account Fieldset -->
+        <fieldset>
+          <legend>GitHub Account</legend>
+
+          <p>Do you have a GitHub account?</p>
+          <label for="github_yes">Yes</label>
+          <input
+            type="radio"
+            name="github"
+            id="github_yes"
+            value="Yes"
+            required
+          />
+          <label for="github_no">No</label>
+          <input type="radio" name="github" id="github_no" value="No" />
+        </fieldset>
+
+        <input type="checkbox" name="terms" id="terms" required /> By checking
+        this box I accept the above is correct
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
